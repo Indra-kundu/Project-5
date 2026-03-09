@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font intigration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- tailwind and daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body class="bg-base-200">
+
+    <!--  <section class="hero min-h-screen"> -->
+    <!-- min-h-screen = section ta k center kore -->
+
+    <div class="hero-content">
+        <!-- hero-content = section ar vitorer content ke center kore -->
+
+        <div class="card  w-full max-w-sm shadow-xl">
+            <div class="card-body">
+                <!-- logo-title part -->
+                <div class="text-center mb-2">
+                    <img class="mx-auto" src="assets/github-logo.png" alt="">
+                    <h1 class="font-bold text-2xl text-[#1F2937] mt-5">GitHub Issues Tracker</h1>
+                    <p class="text-[#64748B]">Sign in to manage your issues</p>
+
+                </div>
+
+
+
+                <fieldset>
+                    <label class="label font-bold">Username</label>
+                    <input type="email" id="username" class="input" placeholder=" Enter Username" />
+                    <p class="text-sm text-[#4A00FF]">Default: admin</p>
+
+                    <label class="label font-bold mt-3">Password</label>
+                    <input type="password" id="password" class="input" placeholder="Enter Password" />
+                    <p class="text-sm text-[#4A00FF]">Default: admin123</p>
+
+                    <a id="login-btn" class="btn btn-primary w-full mt-4" target="_blank" href="second-page.html">Sign
+                        In </a>
+                    <p id="error-msg" class="text-red-500 mt-2 hidden">Invalid Username or Password</p>
+                </fieldset>
+
+
+
+                <!-- or-divider -->
+
+                <div class="divider">
+                    OR
+                </div>
+
+                <!-- <footer> -->
+                <div class="mx-auto">
+                    <p class="text-[#64748B] mb-5">Demo Credentials:</p>
+                    <div>
+                        <p><span class="font-bold">Username:</span> <span class="text-[#64748B]">admin</span></p>
+
+                        <p><span class="font-bold">Password:</span><span class="text-[#64748B]">admin123</span></p>
+                    </div>
+                </div>
+                </section>
+
+
+
+</body>
+
+
+<!-- <script>
+    const loginBtn = document.getElementById("login-btn");
+    const usernameInput = document.getElementById("username");
+    const passwordInput = document.getElementById("password");
+    const errorMsg = document.getElementById("error-msg");
+
+    loginBtn.addEventListener("click", function (a) {
+        a.preventDefault(); // link click default prevent kore
+
+        const username = usernameInput.value.trim();
+        const password = passwordInput.value.trim();
+
+        if (username === "admin" && password === "admin123") {
+
+            window.location.href = "second-page.html";
+        } else {
+            // invalid login
+            errorMsg.classList.remove("hidden");
+        }
+    });
+</script> -->
+
+</html>

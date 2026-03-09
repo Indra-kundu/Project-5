@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- font intigration -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- tailwind and daisyui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        #post-container {
+            max-width: 1160px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        .post-card {
+            border: 1px solid #E4E4E7;
+            box-shadow: 1px #64748B;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #ffffff;
+            height: 100%;
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+
+
+
+        .labels {
+            display: flex;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-[#F8FAFC]">
+    <nav class="bg-[#ffffff] shadow-sm ">
+
+        <div class="navbar bg-base-100 shadow-sm justify-between items-center">
+            <div class="flex items-center">
+                <img src="assets/github-logo.png" alt="">
+                <a class="btn btn-ghost text-xl">GitHub Issues Tracker</a>
+            </div>
+            <div class="flex items-center gap-2">
+                <div>
+                    <input type="text" placeholder="Search issues..." class="input input-bordered w-24 md:w-auto" />
+                </div>
+                <button class=" btn btn-primary">New Issue</button>
+            </div>
+
+        </div>
+    </nav>
+
+    <section id="button-section" class="mt-6">
+        <div class="p-3">
+            <button onclick="allData('all')" class="btn btn-primary btn-active s-btn">All</button>
+            <button data-filter="open" class="btn btn-outline s-btn">Open</button>
+            <button data-filter="close" class="btn btn-outline s-btn">Closed</button>
+        </div>
+    </section>
+
+
+    <section id="" class="mt-5">
+        <div class=" bg-[#ffffff] flex justify-between items-center p-3">
+            <div class="flex gap-3">
+                <div class="">
+                    <img class="p-2" src="assets/Aperture.png" alt="">
+                </div>
+                <div>
+                    <h2 id="issue-count" class="font-bold">50 Issues</h2>
+                    <p class="text-[#64748B]">Track and manage your project issues</p>
+                </div>
+            </div>
+            <div class="flex flex-row gap-3">
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                    <p>Open</p>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 bg-purple-500 rounded-full"></span>
+                    <p>Close</p>
+                </div>
+
+
+            </div>
+    </section>
+
+    <section class="mt-5">
+        <div id="post-container" class="">
+
+        </div>
+    </section>
+
+    <!-- add modal -->
+
+
+    <!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+    <dialog id="post_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="details-container">
+
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn btn-primary">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <script src="js/sign.js"></script>
+
+
+
+</body>
+
+</html>
